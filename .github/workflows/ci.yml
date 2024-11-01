@@ -34,7 +34,7 @@ jobs:
             # 5. 의존성 설치
             - name: Install dependencies
               working-directory: react-app
-              run: npm install
+              run: npm ci
 
             # 6. ESLint 실행
             - name: Run ESLint
