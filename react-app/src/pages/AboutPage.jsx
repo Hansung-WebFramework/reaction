@@ -1,12 +1,11 @@
 // src/pages/AboutPage.jsx
 export default function AboutPage() {
     return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-green-100">
-        <h1 className="text-4xl font-bold">About Us</h1>
-        <p className="mt-4 text-gray-700">
-            This is the About page created with Tailwind CSS.
+      <div className="container mx-auto px-4 py-8">
+        <h2 className="text-2xl font-semibold mb-4">About Us</h2>
+        <p className="text-gray-700">
+          Welcome to Newsy! We provide the latest news articles across various categories.
         </p>
-    </div>
-    )
-}
-  
+      </div>
+    );
+  }
