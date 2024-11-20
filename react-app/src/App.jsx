@@ -1,30 +1,28 @@
-// src/App.jsx
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
+'use client'
 
-function App() {
+import { useState } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Navbar from './components/layout/Navbar'
+import SelectedArticle from './components/articles/SelectedArticle'
+import ArticleList from './components/articles/ArticleList'
+import { articles } from './data/articles'
+
+export default function App() {
+  const [selectedArticle, setSelectedArticle] = useState(articles[0])
+
   return (
     <Router>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-        {/* 네비게이션 메뉴 */}
-        <nav className="mb-8">
-          <Link to="/" className="mx-4 text-blue-500 hover:underline">
-            Home
-          </Link>
-          <Link to="/about" className="mx-4 text-blue-500 hover:underline">
-            About
-          </Link>
-        </nav>
-
-        {/* 라우트 설정 */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
+      <div className="min-h-screen bg-[#f0f4f8]">
+        <Navbar />
+        <main className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+              <SelectedArticle article={selectedArticle} />
+            </div>
+            <ArticleList articles={articles} onArticleSelect={setSelectedArticle} />
+          </div>
+        </main>
       </div>
     </Router>
   )
 }
-
-export default App
