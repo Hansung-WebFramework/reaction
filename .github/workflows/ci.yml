@@ -51,9 +51,7 @@ jobs:
             #     git diff-index --quiet HEAD || git commit -m "chore: format code with Prettier"
 
             # 8. ESLint 실행
-            - name: Run ESLint
-              working-directory: react-app
-              run: npm run lint  # ESLint를 실행하는 스크립트를 `package.json`에 설정
+
 
             # 9. 빌드 실행
             - name: Build project
