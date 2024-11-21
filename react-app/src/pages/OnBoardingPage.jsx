@@ -1,14 +1,16 @@
 import React from 'react';
-import Header from '../components/Header';
+// import Header from '../components/layout/Header';
+import Navbar from '../components/layout/Navbar'
 import AnalysisChart from '../components/AnalysisChart';
 import styles from './OnBoardingPage.module.css';
 import OnBoardingObject from '../assets/images/OnBoardingObject.png';
+
 
 export default function OnBoardingPage() {
   return (
     <div>
       {/* 헤더 */}
-      <Header />
+      <Navbar />
 
       {/* 차트 섹션 */}
       <section className={styles['chart-section']}>
