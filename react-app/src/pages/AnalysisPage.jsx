@@ -79,7 +79,7 @@ export default function AnalysisPage() {
           {/* 오른쪽 섹션: 원본 기사 카드 */}
           <Card>
             <CardHeader>
-              <CardTitle>What are Israel’s Iron Dome, David’s Sling, and Arrow missile defenses?</CardTitle>
+              <CardTitle>What are Israel&apos;s Iron Dome, David&apos;s Sling, and Arrow missile defenses?</CardTitle>
             </CardHeader>
             <CardContent>
               {/* next/image 대신 img 태그 사용 */}
@@ -94,7 +94,7 @@ export default function AnalysisPage() {
                 <p className="text-sm text-muted-foreground">
                   Israel uses its elaborate system of air defenses to counter hundreds of missiles and drones launched by Iran on Tuesday night.
                 </p>
-                <h3 className="font-medium">What are the different tiers of Israel's missile defence system?</h3>
+                <h3 className="font-medium">What are the different tiers of Israel&apos;s missile defence system?</h3>
                 <p className="text-sm text-muted-foreground">
                   Israel has several air defence systems, each one designed to intercept incoming missiles at different altitudes and distances...
                 </p>
