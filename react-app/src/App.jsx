@@ -12,7 +12,7 @@ export default function App() {
         <Route path="/IdentifiedArticlesPage" element={<IdentifiedArticlesPage />} /> {/* 판별 기사 목록 페이지 라우팅 */}
         <Route 
           path="/AnalysisPage" 
-          element={<AnalysisPage {...mockAnalysisData} />} 
+          element={<AnalysisPage {...mockAnalysisDataList[0]} />} // 기본적으로 첫 번째 데이터 표시
         /> {/* 분석 차트 페이지 라우팅 */}
       </Routes>
     </Router>

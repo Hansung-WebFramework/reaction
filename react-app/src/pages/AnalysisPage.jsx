@@ -1,11 +1,20 @@
 // 뉴스 분석 페이지 구성
+import { useParams } from 'react-router-dom'; // useParams 가져오기
+import { mockAnalysisDataList } from '../data/mockData'; // Mock 데이터 가져오기
 import { Button } from "../components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-import { Link } from 'react-router-dom'; 
-import '../components/layout/AnalysisPage.module.css';
 import Navbar from '../components/layout/Navbar.jsx';
 
-const AnalysisPage = ({ summary, accuracy, originalArticle }) => {
+const AnalysisPage = () => {
+  const { id } = useParams(); // URL에서 id 파라미터 가져오기
+  const data = mockAnalysisDataList.find((item, index) => index + 1 === parseInt(id, 10)); // ID로 데이터 선택
+
+  if (!data) {
+    return <div>데이터를 찾을 수 없습니다.</div>; // ID가 유효하지 않을 때 처리
+  }
+
+  const { summary, accuracy, originalArticle } = data;
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navbar 사용 */}
