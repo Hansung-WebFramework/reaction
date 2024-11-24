@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import OnboardingPage from './pages/OnboardingPage';
 import IdentifiedArticlesPage from './pages/IdentifiedArticlesPage';
 import AnalysisPage from './pages/AnalysisPage';
-import mockAnalysisData from './data/mockData' // Mock 데이터 import
+import mockAnalysisDataList from './data/mockData' // Mock 데이터 import
 
 export default function App() {
   return (
