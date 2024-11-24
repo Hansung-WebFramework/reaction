@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'; // useParams 가져오기
 import { mockAnalysisDataList } from '../data/mockData'; // Mock 데이터 가져오기
 import { Button } from "../components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import '../components/layout/AnalysisPage.module.css';
 import Navbar from '../components/layout/Navbar.jsx';
 
 const AnalysisPage = () => {
