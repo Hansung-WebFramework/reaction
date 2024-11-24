@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom'; // React Router 사용
 import {
   LineChart,
