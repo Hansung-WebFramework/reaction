@@ -6,13 +6,14 @@ export default function ArticleItem({ article, onClick }) {
             className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
             onClick={() => onClick(article)}
         >
+            {/* 이미지에 hover 시 확대 효과 추가 */}
             <img
                 src={article.image}
                 alt={article.title}
-                className="w-full h-32 object-cover" // 높이를 조정
+                className="w-full h-32 object-cover transition-transform duration-300 transform hover:scale-105" // 확대 효과 추가
             />
-            <div className="p-3"> {/* 패딩을 조정 */}
-                <h3 className="font-medium text-sm text-gray-900">{article.title}</h3> {/* 글자 크기를 조정 */}
+            <div className="p-3">
+                <h3 className="font-medium text-sm text-gray-900">{article.title}</h3>
             </div>
         </div>
     )
