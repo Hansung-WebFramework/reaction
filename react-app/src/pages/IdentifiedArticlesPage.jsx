@@ -1,11 +1,28 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from '../components/layout/Navbar'
 import SelectedArticle from '../components/articles/SelectedArticle'
 import ArticleList from '../components/articles/ArticleList'
-import { articles } from '../data/articles'
+// import { articles } from '../data/articles'
+import { useArticles } from '../hooks/useArticles';
 
 export default function IdentifiedArticlesPage() {
+    const { articles, loading } = useArticles();
     const [selectedArticle, setSelectedArticle] = useState(articles[0])
+
+    useEffect(() => {
+        if (articles.length > 0 && !selectedArticle) {
+            setSelectedArticle(articles[0]);
+        }
+    }, [articles, selectedArticle]);
+
+    if (loading) {
+        return (
+            <div>
+                <Navbar />
+                <div>로딩 중...</div>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-[#f0f4f8]">
